@@ -16,17 +16,20 @@ export const metadata: Metadata = {
     template: "%s | EIDOS Design Studio",
   },
   description: "EIDOS Design Studio — architecture, interior design and BIM services across the Middle East.",
-  other: {
-    "codex-preview": "development",
-  },
   openGraph: {
     title: "EIDOS Design Studio",
     description: "Shaping ideas into refined design experiences.",
     type: "website",
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    // SVG first for modern browsers; .ico is what search-engine crawlers and
+    // older Windows browsers still ask for, so both are shipped.
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "48x48" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
