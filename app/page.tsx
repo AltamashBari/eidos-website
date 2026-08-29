@@ -5,14 +5,14 @@ import { HomeKineticSequence } from "./home-motion";
 
 // Local placeholders — swap these for EIDOS project photography.
 const homeNewsImages = [
-  "/images/projects/lobby.png",
-  "/images/projects/retail.png",
+  "/images/projects/lobby.webp",
+  "/images/projects/retail.webp",
 ];
 
 const featuredReferenceImages = [
-  "/images/projects/lobby.png",
-  "/images/projects/retail.png",
-  "/images/projects/office.png",
+  "/images/projects/lobby.webp",
+  "/images/projects/retail.webp",
+  "/images/projects/office.webp",
 ];
 
 export default function Home() {

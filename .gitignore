@@ -38,3 +38,6 @@ yarn-error.log*
 .vscode/*
 !.vscode/extensions.json
 .idea
+
+# staged for manual deletion (bridge cannot delete files)
+/_to_delete

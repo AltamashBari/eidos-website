@@ -17,7 +17,7 @@ export default function MediaPage() {
               <Link href="/media">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={index % 3 === 0 ? "/images/projects/retail.png" : index % 3 === 1 ? "/images/projects/office.png" : "/images/projects/lobby.png"}
+                  src={index % 3 === 0 ? "/images/projects/retail.webp" : index % 3 === 1 ? "/images/projects/office.webp" : "/images/projects/lobby.webp"}
                   alt="EIDOS project press feature"
                 />
                 <span>{date}</span>

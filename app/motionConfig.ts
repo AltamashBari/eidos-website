@@ -42,13 +42,20 @@ export const motionConfig = {
     // Scroll distance each chapter occupies. The animation is scrubbed against
     // this height, so a LARGER number spreads the same beats over more scroll —
     // the story plays slower without anything being cut.
-    introViewportHeights: 2150,
+    introViewportHeights: 2500,
     teamViewportHeights: 990,
     chapterOverlapViewportHeights: 270,
     heroExit: [0.355, 0.5] as const,
-    sectorTravel: [0.465, 1] as const,
+    // The carousel must FINISH before the team chapter's overlap starts
+    // covering it, or the last panel never gets clean screen time.
+    // Overlap begins at 1 - (chapterOverlap / introViewportHeights) = 0.892,
+    // so ending at 0.82 leaves ~180svh where Collaborations simply sits.
+    sectorTravel: [0.44, 0.82] as const,
     sectorPanelViewportWidths: 63,
-    sectorTravelViewportWidths: 341,
+    // 6 panels x 63vw = 378vw of track; travel is that minus one viewport.
+    // These two MUST match the number of entries in `sectors` in
+    // home-motion.tsx and `.sector-track { width }` in globals.css.
+    sectorTravelViewportWidths: 278,
     sectorMainParallax: 1,
     sectorRearParallax: 1.2,
     sectorAccentParallax: 0.5,

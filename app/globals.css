@@ -270,7 +270,7 @@ img { max-width: 100%; display: block; }
 .story-beat strong { font: 600 clamp(4rem, 10vw, 9.375rem)/.86 var(--display); text-transform: lowercase; }
 
 .sector-panorama { background: var(--offwhite); inset: 0; opacity: var(--sector-in, 0); overflow: hidden; position: absolute; visibility: var(--sector-visibility, hidden); z-index: 12; }
-.sector-track { display: flex; height: 100%; transform: translate3d(var(--sector-x, 0), 0, 0); width: 441vw; will-change: transform; }
+.sector-track { display: flex; height: 100%; transform: translate3d(var(--sector-x, 0), 0, 0); width: 378vw; will-change: transform; }
 .sector-panel { align-items: center; display: grid; flex: 0 0 63vw; grid-template-columns: 5vw 31vw 1fr; height: 100%; opacity: var(--sector-opacity, .3); overflow: hidden; padding: var(--header-h) 3vw 0; position: relative; transform: scale(var(--sector-scale, .97)); transform-origin: center; }
 .sector-panel::before { background: var(--sector-color, var(--cream)); clip-path: polygon(8% 0, 100% 8%, 83% 100%, 0 82%); content: ""; height: 42vh; position: absolute; right: 5vw; top: 8vh; transform: rotate(var(--sector-tilt, -3deg)); width: 38vw; z-index: -1; }
 .sector-panel-2 { --sector-color: var(--orange); --sector-tilt: 4deg; }
@@ -284,7 +284,7 @@ img { max-width: 100%; display: block; }
 .sector-copy h2 { font: 700 clamp(2.875rem, 5.7vw, 5.5rem)/.82 var(--display); margin: 0; max-width: 8ch; text-transform: uppercase; }
 .sector-copy a { align-items: center; display: inline-flex; font: 700 17px var(--display); gap: 14px; margin-top: 35px; text-transform: uppercase; }
 .sector-copy a span, .panther-link span { color: var(--orange); font-size: 30px; font-weight: 300; }
-.sector-rear, .sector-accent-track { height: 100%; left: 0; pointer-events: none; position: absolute; top: 0; width: 560vw; will-change: transform; }
+.sector-rear, .sector-accent-track { height: 100%; left: 0; pointer-events: none; position: absolute; top: 0; width: 480vw; will-change: transform; }
 .sector-rear { transform: translate3d(var(--sector-rear-x, 0), 0, 0); z-index: 0; }
 .sector-rear span { background: radial-gradient(circle, rgba(34,34,34,.18) 1.5px, transparent 2px) 0 0/9px 9px; border-radius: 48%; height: 190px; position: absolute; top: 9vh; transform: rotate(-10deg); width: 34vw; }
 .sector-accent-track { transform: translate3d(var(--sector-accent-x, 0), 0, 0); z-index: 7; }
@@ -388,10 +388,10 @@ body.page-ready .project-title-band > div { opacity: 1; transform: translate3d(0
 .sector-copy a { color: var(--orange); font-size: 24px; margin: 0; }
 .sector-panel:nth-child(even) .sector-copy { left: 31vw; top: 41vh; }
 .sector-panel:nth-child(3n) .sector-copy { left: 18vw; top: 35vh; }
-.sector-accent-track { width: 560vw; z-index: 3; }
+.sector-accent-track { width: 480vw; z-index: 3; }
 .sector-accent-track img { height: auto; max-height: 72vh; position: absolute; top: 25vh; width: 80vw; }
 .sector-sand-tracks { bottom: 0; height: 31vh; left: 0; pointer-events: none; position: absolute; width: 100%; z-index: 7; }
-.sector-sand-tracks img { bottom: 0; height: auto; left: 0; max-width: none; position: absolute; width: 441vw; will-change: transform; }
+.sector-sand-tracks img { bottom: 0; height: auto; left: 0; max-width: none; position: absolute; width: 378vw; will-change: transform; }
 .sector-sand-rear { transform: translate3d(var(--sector-rear-x, 0), 0, 0); }
 .sector-sand-front { transform: translate3d(var(--sector-front-x, -322.6vw), 0, 0); width: 422.6vw !important; z-index: 2; }
 .sector-rear, .sector-sand { display: none; }
@@ -651,7 +651,7 @@ body.page-ready .project-title-band > div { opacity: 1; transform: translate3d(0
   .mobile-menu a:focus-visible .motion-word-row-a i { opacity: 0; transform: translateY(-1em); }
   .mobile-menu a:hover .motion-word-row-b i,
   .mobile-menu a:focus-visible .motion-word-row-b i { opacity: 1; transform: translateY(-1em); }
-  .kinetic-intro { height: 1110svh !important; }
+  .kinetic-intro { height: 1290svh !important; }
   .kinetic-team { height: 635svh !important; margin-top: -95svh; }
   .featured-section { margin-top: -95svh; }
   .sector-panel { grid-template-columns: 6vw 55vw 1fr; padding-left: 3vw; padding-right: 3vw; }
@@ -727,7 +727,7 @@ body.page-ready .project-title-band > div { opacity: 1; transform: translate3d(0
   .home-hero { min-height: 92svh; }
   .hero-lockup { top: 36%; }
   .hero-lockup p { font-size: 18px; }
-  .kinetic-intro { height: 970svh !important; }
+  .kinetic-intro { height: 1130svh !important; }
   .kinetic-team { height: 525svh !important; margin-top: -74svh; }
   .featured-section { margin-top: -74svh; }
   .story-beat { padding: 24px; }
@@ -824,7 +824,7 @@ body.page-ready .project-title-band > div { opacity: 1; transform: translate3d(0
 }
 
 /* ── Palette-native shapes ──────────────────────────────────────────────
-   These replace the reference site's hotlinked PNG/GIF artwork, which had its brand
+   These replace the reference site's hotlinked artwork, which had its brand
    colours baked into the image files. Everything below is drawn in CSS
    from the EIDOS palette, so it can never drift off-brand again. */
 

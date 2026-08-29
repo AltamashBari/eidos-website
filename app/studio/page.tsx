@@ -8,7 +8,7 @@ export default function StudioPage() {
           <div className="rm-title"><span>EIDOS</span><h1>STUDIO</h1></div>
           <p>Architecture <i /> Interior Design <i /> BIM Services</p>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/projects/office.png" alt="A contemporary workplace interior" />
+          <img src="/images/projects/office.webp" alt="A contemporary workplace interior" />
         </section>
         <section className="rm-intro">
           <Reveal><p>Design thinking meets</p><h2>technical precision.</h2></Reveal>
@@ -20,7 +20,7 @@ export default function StudioPage() {
         <section className="rm-profile">
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/projects/lobby.png" alt="Sculptural hospitality interior" />
+            <img src="/images/projects/lobby.webp" alt="Sculptural hospitality interior" />
           </div>
           <Reveal>
             <p className="section-kicker">How we work</p>

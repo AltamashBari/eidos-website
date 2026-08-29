@@ -10,10 +10,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const index = projects.findIndex((item) => item.slug === slug);
   const nextProject = projects[(index + 1) % projects.length];
   const alternatingImage = project.image.includes("office")
-    ? "/images/projects/lobby.png"
+    ? "/images/projects/lobby.webp"
     : project.image.includes("retail")
-      ? "/images/projects/office.png"
-      : "/images/projects/retail.png";
+      ? "/images/projects/office.webp"
+      : "/images/projects/retail.webp";
 
   return (
     <SiteChrome>

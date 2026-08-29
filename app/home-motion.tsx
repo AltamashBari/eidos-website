@@ -5,12 +5,12 @@ import { CSSProperties, RefObject, useCallback, useEffect, useRef } from "react"
 import { clamp01, motionConfig, rangeProgress } from "./motionConfig";
 
 const sectors = [
-  ["Architecture", "", "/images/projects/office.png"],
-  ["Interior Designing", "", "/images/projects/lobby.png"],
-  ["BIM Services", "", "/images/projects/office.png"],
-  ["Exhibition Design", "", "/images/projects/retail.png"],
-  ["Event Design", "", "/images/projects/lobby.png"],
-  ["Collaborations", "", "/images/projects/retail.png"],
+  ["Architecture", "", "/images/projects/office.webp"],
+  ["Interior Designing", "", "/images/projects/lobby.webp"],
+  ["BIM Services", "", "/images/projects/office.webp"],
+  ["Exhibition Design", "", "/images/projects/retail.webp"],
+  ["Event Design", "", "/images/projects/lobby.webp"],
+  ["Collaborations", "", "/images/projects/retail.webp"],
 ] as const;
 
 function useScrubbedChapter(
@@ -113,9 +113,17 @@ function IntroChapter() {
       `${-motionConfig.home.sectorTravelViewportWidths + sectorProgress * motionConfig.home.sectorTravelViewportWidths * motionConfig.home.sectorAccentParallax}vw`,
     );
 
+    // Each panel gets a PLATEAU at full focus, not a single instant of it.
+    // The old curve was a pure triangle — 1 - |p - centre| / 0.2 — which peaks
+    // for zero duration, so every panel was already fading before it had
+    // finished arriving. HOLD is the flat top; FADE is the falloff after it.
+    const SECTOR_HOLD = 0.06;
+    const SECTOR_FADE = 0.16;
+
     node.querySelectorAll<HTMLElement>("[data-sector]").forEach((sector, index, all) => {
       const center = index / Math.max(1, all.length - 1);
-      const focus = clamp01(1 - Math.abs(sectorProgress - center) / 0.2);
+      const distance = Math.abs(sectorProgress - center);
+      const focus = clamp01(1 - Math.max(0, distance - SECTOR_HOLD) / SECTOR_FADE);
       sector.style.setProperty("--sector-focus", focus.toFixed(4));
       sector.style.setProperty("--sector-opacity", ((0.28 + focus * 0.72) * sectorPeopleIn).toFixed(4));
       sector.style.setProperty("--sector-scale", (0.97 + focus * 0.03).toFixed(4));
