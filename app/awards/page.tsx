@@ -10,7 +10,7 @@ export default function AwardsPage() {
             <p className="section-kicker">Recognition</p>
             <h1>Awards</h1>
           </div>
-          <p>Big ideas, beautifully made. A running timeline of work recognized across the region and beyond.</p>
+          <p>Big ideas, beautifully made. This timeline fills in as recognition comes.</p>
           <div className="tiger-mark" aria-hidden="true">EIDOS</div>
         </section>
         <section className="awards-timeline">
@@ -19,8 +19,10 @@ export default function AwardsPage() {
               <h2>{award.year}</h2>
               <div>
                 {award.items.map((item) => (
+                  // The awarding body is a placeholder — naming a real one
+                  // beside placeholder entries would read as a false claim.
                   <article key={item}>
-                    <span>Commercial Interior Design Awards</span>
+                    <span>Awarding body</span>
                     <h3>{item}</h3>
                   </article>
                 ))}

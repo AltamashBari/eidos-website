@@ -30,43 +30,43 @@ export type Project = {
 
 const defaults: Record<ProjectCategory, Omit<Project, "slug" | "title" | "category">> = {
   Commercial: {
-    location: "Dubai, UAE",
+    location: "Location to follow",
     year: "2025",
     scope: "Workplace interior",
     image: "/images/projects/office.webp",
   },
   "F&B": {
-    location: "Dubai, UAE",
+    location: "Location to follow",
     year: "2024",
     scope: "Food & beverage",
     image: "/images/projects/retail.webp",
   },
   Hospitality: {
-    location: "Dubai, UAE",
+    location: "Location to follow",
     year: "2026",
     scope: "Hospitality interior",
     image: "/images/projects/lobby.webp",
   },
   Education: {
-    location: "Sharjah, UAE",
+    location: "Location to follow",
     year: "2024",
     scope: "Learning environment",
     image: "/images/projects/lobby.webp",
   },
   Residential: {
-    location: "Dubai, UAE",
+    location: "Location to follow",
     year: "2025",
     scope: "Private residence",
     image: "/images/projects/lobby.webp",
   },
   Retail: {
-    location: "Dubai, UAE",
+    location: "Location to follow",
     year: "2026",
     scope: "Retail interior",
     image: "/images/projects/retail.webp",
   },
   Product: {
-    location: "Dubai, UAE",
+    location: "Location to follow",
     year: "2023",
     scope: "Product collaboration",
     image: "/images/projects/retail.webp",
@@ -76,10 +76,10 @@ const defaults: Record<ProjectCategory, Omit<Project, "slug" | "title" | "catego
 // Generic descriptors only — no real client or project names.
 const projectGroups: Record<ProjectCategory, Array<[string, string]>> = {
   Commercial: [
-    ["commercial-01", "Workplace — Business Bay"],
-    ["commercial-02", "Head Office — DIFC"],
+    ["commercial-01", "Workplace Interior"],
+    ["commercial-02", "Head Office Fit-Out"],
     ["commercial-03", "Consultancy Fit-Out"],
-    ["commercial-04", "Corporate Floor — Riyadh"],
+    ["commercial-04", "Corporate Floor"],
     ["commercial-05", "Innovation Hub"],
     ["commercial-06", "Regional Headquarters"],
   ],

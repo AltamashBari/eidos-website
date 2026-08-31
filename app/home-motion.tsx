@@ -227,13 +227,19 @@ function TeamChapter() {
           </article>
 
           <article className="team-panel stats-scene">
+            {/* This panel used to carry head-count style metrics — years,
+                project count, countries. None of them could be verified, so
+                it now indexes the studio's disciplines instead: true, and it
+                needs no future correction. To turn it back into a metrics
+                panel, replace each 01–04 with the figure and each label with
+                what it counts; the grid takes two or three characters. */}
             <div className="stats-panel">
-              <div><strong>13+</strong><span>Years of multi-sector expertise</span></div>
-              <div><strong>350+</strong><span>Projects</span></div>
-              <div><strong>1:1</strong><span>Psychologist briefing</span></div>
-              <div><strong>12+</strong><span>Countries</span></div>
+              <div><strong>01</strong><span>Architecture</span></div>
+              <div><strong>02</strong><span>Interior Design</span></div>
+              <div><strong>03</strong><span>BIM Services</span></div>
+              <div><strong>04</strong><span>Exhibition Design</span></div>
               <div className="stat-notes">
-                {["Neuroscience + Design", "A focus on social sustainability", "UAE, KSA + Philippines", "In-house MEP team"].map((note, index) => (
+                {["Architectural design", "Interior contracting", "Retail turnkey solutions", "Design and build delivery"].map((note) => (
                   <span key={note}>{note}</span>
                 ))}
               </div>
@@ -242,8 +248,8 @@ function TeamChapter() {
 
           <article className="team-panel panther-panel">
             <div className="panther-copy">
-              <p>The cat that got the...</p>
-              <h2>Crème de<br />la crème<br />of design<br />talent</h2>
+              <p>Shaping ideas into</p>
+              <h2>Refined<br />design<br />experiences</h2>
             </div>
             <span className="panther-mark-shape" aria-hidden="true" />
           </article>

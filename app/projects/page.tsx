@@ -8,11 +8,16 @@ export default function ProjectsPage() {
         <section className="projects-intro">
           <p className="section-kicker">The work</p>
           <h1>Spaces with<br />something to say.</h1>
-          <div className="project-counts">
-            <div><strong>350+</strong><span>Projects</span></div>
-            <div><strong>85+</strong><span>Awards</span></div>
-            <div><strong>12+</strong><span>Countries</span></div>
-          </div>
+          {/* COUNTS — hidden until the studio's own figures are confirmed,
+              rather than published as invented numbers. Restore by removing
+              the comment markers; .project-counts is still styled for three.
+
+              <div className="project-counts">
+                <div><strong>000+</strong><span>Projects</span></div>
+                <div><strong>00+</strong><span>Awards</span></div>
+                <div><strong>00+</strong><span>Countries</span></div>
+              </div>
+          */}
         </section>
         <section className="project-index">
           <ProjectsExplorer projects={projects} />

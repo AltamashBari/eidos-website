@@ -82,6 +82,24 @@ first.
 
 ## Still to replace
 
-- `app/contact-us/page.tsx` — the email address is a placeholder.
-- `public/images/projects/` — placeholder photography.
-- `app/data.ts` — projects, awards and press entries are placeholder content.
+Nothing on this site states a fact about EIDOS that has not been confirmed.
+Everything below is a deliberate blank, left so the real content can be
+dropped in without hunting for it.
+
+| Where | What is missing |
+| --- | --- |
+| `app/contact-us/page.tsx` | Email address, studio address, office cities. All three are placeholder text; the offices section is commented out rather than filled with invented locations. |
+| `app/home-motion.tsx` | The homepage panel that used to show metrics (years, projects, countries) now indexes the four disciplines instead. Swap it back to figures once they are confirmed. |
+| `app/projects/page.tsx` | The projects / awards / countries counts are commented out. |
+| `app/awards/page.tsx` | Award entries and the awarding body are placeholders. |
+| `app/page.tsx` | The publication credit beside the first news item is empty. |
+| `app/data.ts` | Every project, award, press and research entry is invented filler, and each project's location reads "Location to follow". |
+| `public/images/projects/` | Three stock placeholder photographs stand in for EIDOS project photography. |
+
+### The contact form does not send anything
+
+`ContactForm` in `app/components.tsx` calls `preventDefault()` and shows a
+confirmation without transmitting the submission anywhere. Nothing a visitor
+types leaves their browser — which is why there is no privacy notice — but it
+also means real enquiries are silently lost. Wire it to a form endpoint (or
+remove it) before promoting the site.

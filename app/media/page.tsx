@@ -9,7 +9,7 @@ export default function MediaPage() {
         <section className="media-hero">
           <p className="section-kicker">Press room</p>
           <h1>EIDOS in<br />the news</h1>
-          <div className="media-animal" aria-hidden="true">R</div>
+          <div className="media-animal" aria-hidden="true">E</div>
         </section>
         <section className="media-grid">
           {news.map(([date, title], index) => (

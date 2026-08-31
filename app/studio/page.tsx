@@ -14,7 +14,7 @@ export default function StudioPage() {
           <Reveal><p>Design thinking meets</p><h2>technical precision.</h2></Reveal>
           <Reveal>
             <p className="section-kicker">Who we are</p>
-            <p>EIDOS Design Studio is a multidisciplinary architecture and design firm specialising in architectural design, interior contracting and comprehensive retail turnkey solutions. We work with blue-chip clients and independent businesses alike, delivering tailored design-and-build solutions across the Middle East.</p>
+            <p>EIDOS Design Studio is a multidisciplinary architecture and design firm specialising in architectural design, interior contracting and comprehensive retail turnkey solutions. We deliver tailored design-and-build solutions, from first concept through to handover.</p>
           </Reveal>
         </section>
         <section className="rm-profile">

@@ -47,7 +47,9 @@ export default function Home() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={homeNewsImages[index]} alt="" />
                 </div>
-                <div className="news-copy"><p>{title}</p>{index === 0 && <em>Flash Art</em>}<span>{date}</span></div>
+                {/* The <em> slot is where the publication's name goes. It stays
+                    empty until there is a real feature to credit. */}
+                <div className="news-copy"><p>{title}</p><span>{date}</span></div>
               </Link>
             ))}
           </div>

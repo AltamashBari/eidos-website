@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     default: "EIDOS Design Studio",
     template: "%s | EIDOS Design Studio",
   },
-  description: "EIDOS Design Studio — architecture, interior design and BIM services across the Middle East.",
+  description: "EIDOS Design Studio — architecture, interior design and BIM services.",
   openGraph: {
     title: "EIDOS Design Studio",
     description: "Shaping ideas into refined design experiences.",
